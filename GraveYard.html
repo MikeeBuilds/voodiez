@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Voodiez</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">VOODIEZ</a>
+            <ul>
+                <li><a href="#" class="active">home</a></li>
+                <li><a href="#">Check Spells</a></li>
+                <li><a href="#">GraveYard</a></li>
+                <li><a href="#">Spells</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="images\stars.png" id="stars">
+            <img src="images\moon.png" id="moon">
+            <img src="images\mountains_behind.png" id="mountains_behind"> 
+            <h2 id="text">VOODIEZ</h2>
+            <a href="#sec" id="btn">Check For Active Spell</a>
+            <img src="images\mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>VOODIEZ LORE</h2>
+            <p>New Orleans in the mid-nineteenth century is a city overflowing with white aristos, black creoles, and African Slaves, a city that pulses with crowds, with commerce and with the power and spectacle of the voodoo religion. At the center of the ritual is Marie Laveau, the notorious voodoiene, worshipped and feared by blacks and whites alike. Marie’s followers claimed that she walked on water and sucked poison from a snake’s jowls, that she raised the dead and murdered two men.
+
+                Raised by her Grandmère in the Louisiana bayou, Marie ventures to New Orleans and begins a journey of self-discovery, hoping to find her lost Maman and understand the visions that haunt her dreams. Instead, she runs headlong into the brutality of slavery and oppression and into the arms of John, the voodoo doctor who promises to teach her what Grandmère will not. As she falls under his spell, John sweeps Marie into a world of voodoo ceremonies, of drama and manipulation, and of sometimes terrifying power. A mesmerizing combination of history and story telling, Voodoo Dreams was Dr. Jewell Parker Rhodes first novel and a Barnes & Noble Discover Great New Writers selection.<br><br>New Orleans in the mid-nineteenth century is a city overflowing with white aristos, black creoles, and African Slaves, a city that pulses with crowds, with commerce and with the power and spectacle of the voodoo religion. At the center of the ritual is Marie Laveau, the notorious voodoiene, worshipped and feared by blacks and whites alike. Marie’s followers claimed that she walked on water and sucked poison from a snake’s jowls, that she raised the dead and murdered two men.
+
+                Raised by her Grandmère in the Louisiana bayou, Marie ventures to New Orleans and begins a journey of self-discovery, hoping to find her lost Maman and understand the visions that haunt her dreams. Instead, she runs headlong into the brutality of slavery and oppression and into the arms of John, the voodoo doctor who promises to teach her what Grandmère will not. As she falls under his spell, John sweeps Marie into a world of voodoo ceremonies, of drama and manipulation, and of sometimes terrifying power. A mesmerizing combination of history and story telling, Voodoo Dreams was Dr. Jewell Parker Rhodes first novel and a Barnes & Noble Discover Great New Writers selection.</p>
+        </div>
+
+        <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+        </script>
+    </body>
+</html>
